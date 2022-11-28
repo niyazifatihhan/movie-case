@@ -1,0 +1,126 @@
+:root {
+  --margin-sm: 22.5px;
+  --margin-md: 45px;
+  --margin-lg: 60px;
+}
+
+.page-grid {
+  margin-top: var(--margin-md);
+  display:grid;
+  grid-template-columns: 3fr 1fr;
+  gap: var(--margin-md);
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  padding: var(--margin-sm);
+  border-radius:12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.genres {
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+  
+}
+.genre-chip {
+  color: #fff;
+  background-color: #A59AAC;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+#overview {
+  
+}
+.companies {
+  display: flex;
+  flex-direction: row;
+  gap:10px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+#vote {
+  color: #f0c375;
+  font-size: 20px;
+}
+#movie-image {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.vote-flex {
+  display:flex;
+  flex-direction: row;
+  align-items:center;
+  gap: 10px;
+}
+
+.company-card{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #1A0029;
+  background-color: #190027;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.company-name {
+  font-weight: 700;
+  text-align:center
+}
+.seasons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: var(--margin-sm)
+}
+.season-card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  padding: var(--margin-sm);
+  border: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  gap: 10px;
+}
+
+.season-card-body {
+  display: flex;
+  flex-direction: col;
+}
+.serie-image {
+  width: 100px;
+  border-radius: 4px;
+}
+
+.details-nav {
+  background-color: #392E5B;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  border-radius: 4px;
+  padding: 6px;
+  margin-bottom: var(--margin-sm);
+  padding: var(--margin-sm)
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+}
