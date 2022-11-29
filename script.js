@@ -1,14 +1,17 @@
 const getMovies = async () => {
-  const data = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=145ee673e96692552854699788fb94fc&page=1")
-  const json = await data.json()
+  const data = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=145ee673e96692552854699788fb94fc&page=1") // sunucudan verinin gelmesini bekliyoruz
+  const json = await data.json() // json objesine ceviriyoruz
+
   const movies = document.getElementById("movies")
   //console.log(json)
-  const first = json.results.sort((m1, m2) =>  m2.vote_average - m1.vote_average)[0]
+
+  const first = json.results.sort((m1, m2) => m2.vote_average - m1.vote_average)[0] // gelen veriyi sort ediyoruz, daha sonrasında en yüksek puanı olanı seçiyoruz [1,2,3]
+  //poster sol alan başlangıç
   const card1 = document.getElementById("c-1")
   card1.innerHTML = `
     <div onclick="gotoMovie(${first.id}, 'movie')" class="card">
     <div class="card-h-r">
-      <div class="card-header">
+      <div class="card-header card-header-white">
         ${first.vote_average}/10
       </div>
     </div>
@@ -20,7 +23,10 @@ const getMovies = async () => {
     </div>
   </div>
   `
-  json.results.sort((m1, m2) =>  m2.vote_average - m1.vote_average).slice(0, 8).forEach((movie) => {
+  //poster sol alan bitiş 
+
+  //movies alanı
+  json.results.sort((m1, m2) => m2.vote_average - m1.vote_average).slice(0, 8).forEach((movie) => {
     movies.innerHTML += `
     <div onclick="gotoMovie(${movie.id}, 'movie')" class="card">
     <div class="card-h-r">
@@ -39,16 +45,20 @@ const getMovies = async () => {
   })
 
 }
+// arrow function () => {}
+// async await -> promise
 const getSeries = async () => {
   const data = await fetch("https://api.themoviedb.org/3/tv/popular?api_key=145ee673e96692552854699788fb94fc&page=1")
   const json = await data.json()
   const series = document.getElementById("series")
-  const first = json.results.sort((s1, s2) =>  s2.vote_average - s1.vote_average)[0]
+  //poster sağ alan başlangıç
+  const first = json.results.sort((s1, s2) => s2.vote_average - s1.vote_average)[0]
   const card2 = document.getElementById("c-2")
+
   card2.innerHTML = `
     <div onclick="gotoSerie(${first.id}, 'series')" class="card">
     <div class="card-h-r">
-      <div class="card-header">
+      <div class="card-header card-header-white">
         ${first.vote_average}/10
       </div>
     </div>
@@ -60,7 +70,10 @@ const getSeries = async () => {
     </div>
   </div>
   `
-  json.results.sort((s1, s2) =>  s2.vote_average - s1.vote_average).slice(0, 8).forEach((movie) => {
+  //poster sağ alan bitişi
+
+  //diziler
+  json.results.sort((s1, s2) => s2.vote_average - s1.vote_average).slice(0, 8).forEach((movie) => {
     series.innerHTML += `
 <div onclick="gotoSerie(${movie.id}, 'series')"  class="card">
     <div class="card-h-r">

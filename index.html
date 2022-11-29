@@ -9,50 +9,72 @@
 </head>
 
 <body>
-  <div class="hero">
-    <nav class="navigation">
-      <a href="/">
-        Logo
-      </a>
-      <div class="nav-right">
-        <a href="">
-          Popular TV Series
+  <div class="container">
+
+
+    <div class="hero">
+      <nav class="navigation">
+        <a id="logo" href="/">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="32" height="32"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+            <line x1="8" y1="4" x2="8" y2="20"></line>
+            <line x1="16" y1="4" x2="16" y2="20"></line>
+            <line x1="4" y1="8" x2="8" y2="8"></line>
+            <line x1="4" y1="16" x2="8" y2="16"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="16" y1="8" x2="20" y2="8"></line>
+            <line x1="16" y1="16" x2="20" y2="16"></line>
+          </svg> Movies and Series
         </a>
-        <a href="">
-          Popular Movies
-        </a>
-      </div>
-    </nav>
-    <div class="posters">
-      <div  class="col-1">
-        <div id="c-1">
-          
+        <div class="nav-right">
+          <a href="#series-title">
+            Popular TV Series
+          </a>
+          <a href="#movies-title">
+            Popular Movies
+          </a>
         </div>
-      </div>
-      <div class="col-3">
-        <p class="title-1">
-          Welcome to the
-        </p>
-        <p class="title-2">
-          World of TV Series & Movies
-        </p>
-      </div>
-      <div id="col-left" class="col-1">
-        <div id="c-2">
-          
+      </nav>
+      <div class="posters">
+        <div class="col-1">
+          <div id="c-1">
+
+          </div>
+        </div>
+        <div class="col-3">
+          <p class="title-1">
+            Welcome to the
+          </p>
+          <p class="title-2">
+            World of TV Series & Movies
+          </p>
+        </div>
+        <div id="col-left" class="col-1">
+          <div id="c-2">
+
+          </div>
         </div>
       </div>
     </div>
+    <div class="container">
+      <h2 id="movies-title" class="section-title">
+        Popular Movies
+      </h2>
+      <div id="movies">
+
+      </div>
+      <h2 id="series-title" class="section-title">
+        Popular TV Series
+      </h2>
+      <div id="series">
+
+      </div>
+    </div>
   </div>
-  <h2 class="section-title">
-    Popular Movies
-  </h2>
-  <div id="movies"></div>
-  <h2 class="section-title">
-    Popular TV Series
-  </h2>
-  <div id="series"></div>
-  
+
   <script src="script.js"></script>
   </script>
 </body>
@@ -64,4 +86,5 @@
     <a target="_blank" href="https://github.com/niyazifatihhan/movie-case">Github</a>
   </div>
 </footer>
+
 </html>

@@ -6,18 +6,16 @@
 
 .page-grid {
   margin-top: var(--margin-md);
-  display:grid;
-  grid-template-columns: 3fr 1fr;
+  display:flex;
+  flex-direction: row;
   gap: var(--margin-md);
 }
 
 .page-main {
   display: flex;
   flex-direction: column;
-  border: 1px solid #aaa;
-  padding: var(--margin-sm);
   border-radius:12px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  
 }
 .genres {
   display: flex;
@@ -33,13 +31,11 @@
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-#overview {
-  
-}
+
 .companies {
-  display: flex;
-  flex-direction: row;
-  gap:10px;
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) ) ;
 }
 .sidebar {
   display: flex;
@@ -52,6 +48,9 @@
 #movie-image {
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 300px;
+  position: sticky;
+  top: 20px;
 }
 .vote-flex {
   display:flex;
@@ -76,10 +75,12 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  object-fit: cover;
 }
 .company-name {
   font-weight: 700;
-  text-align:center
+  text-align:center;
+  margin: 0px;
 }
 .seasons {
   display: flex;
@@ -114,13 +115,54 @@
   align-items: center;
   width: auto;
   border-radius: 4px;
-  padding: 6px;
+  
   margin-bottom: var(--margin-sm);
   padding: var(--margin-sm)
 }
-
-#logo {
+.title-container {
+  border: 1px solid #eee;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-radius: var(--margin-sm);
+  padding: var(--margin-sm);
   display: flex;
   flex-direction: row;
-  align-items:center;
+  justify-content: space-between;
+  align-items: center;
+}
+#voter-count {
+  font-weight: 300;
+  font-size: 8;
+}
+
+h2 {
+  margin: 0px;
+}
+@media only screen and (max-width: 980px) {
+  .page-grid {
+    flex-direction: column-reverse;
+  }
+  #movie-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.dates {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cast {
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) ) ;
+}
+.cast-subtitle {
+  font-weight: 300;
+  font-size: 10px;
+  margin:0px;
+}
+.mts {
+  margin-top: var(--margin-sm);
 }
